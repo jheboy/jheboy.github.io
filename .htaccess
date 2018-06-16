@@ -1,2 +1,8 @@
+# Prevent Apache from serving .ht* files:
+<FilesMatch "^\.ht">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
 RewriteEngine on
 RewriteRule ^.+$ /index.php [L]
